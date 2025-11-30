@@ -23,7 +23,7 @@ FOR EACH ROW
 BEGIN
     UPDATE `inventory`
     SET `quantity` = `quantity` - NEW.`quantity`
-    WHERE `product_id` = NEW.`product_id` AND `warehouse_id` = 1; -- Assuming a default warehouse for sales
+    WHERE `product_id` = NEW.`product_id` AND `warehouse_id` = 1;
 END$$
 DELIMITER ;
 
