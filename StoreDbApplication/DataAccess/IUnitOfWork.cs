@@ -10,6 +10,8 @@ namespace StoreDbApplication.DataAccess
         IOrderRepository OrderRepository { get; }
         IProductRepository ProductRepository { get; }
 
+        IProductDetailSqlRepository ProductDetailSqlRepository { get; }
+
         void Commit();
         void Rollback();
     }

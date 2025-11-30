@@ -22,6 +22,8 @@ namespace StoreDbApplication.DataAccess
             CustomerRepository = new CustomerRepository(_transaction);
             OrderRepository = new OrderRepository(_transaction);
             ProductRepository = new ProductRepository(_transaction);
+
+            ProductDetailSqlRepository = new ProductDetailSqlRepository(_transaction);
         }
 
         public IEmployeeRepository EmployeeRepository { get; private set; }
@@ -29,6 +31,8 @@ namespace StoreDbApplication.DataAccess
         public ICustomerRepository CustomerRepository { get; private set; }
         public IOrderRepository OrderRepository { get; private set; }
         public IProductRepository ProductRepository { get; private set; }
+
+        public IProductDetailSqlRepository ProductDetailSqlRepository { get; private set; }
 
         public void Dispose()
         {
